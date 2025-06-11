@@ -1,5 +1,18 @@
 # SpectraMAENet
-A spectral self-supervised learning method based on Mask AutoEncoder (SMAE)
+## About
+This repository contains the code and resources of the following paper:
+A spectral self-supervised learning method based on Mask AutoEncoders
+
+## Overview of the framework
+SMAE is a new self-supervised learning framework for Raman spectroscopy, which includes a transformer encoder structure and uses a masked pre-training strategy.
+
+<p align="center">
+<img  src="SMAE.jpg"> 
+</p>
+
+
+
+
 
 Self-supervised learning uses spectral data as: Pathogen bacteria dataset [bacteria_ID](https://www.dropbox.com/scl/fo/fb29ihfnvishuxlnpgvhg/AJToUtts-vjYdwZGeqK4k-Y?rlkey=r4p070nsuei6qj3pjp13nwf6l&e=1&dl=0)
 
