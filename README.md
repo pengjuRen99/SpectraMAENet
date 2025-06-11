@@ -20,7 +20,22 @@ Activate the environment
     conda activate SMAE
 
 ## **Pre-train**
+### Pretrain-bacteriaID
+    python main_unsupervisePretrain.py --data_path ./datasets/bacteriaID/ --dataset reference --device cuda:0 --epoch 500 --batch_size 64 --lr 1e-3 --wd 1e-5 --mask_ratio 0.5 --save_path ./Pretrain_weight/
 
+### Pretrain-DEEPER
+    python main_denoisingPretrain.py --data_path ./datasets/DEEPER/ --device cuda:0 --epoch 800 --batch_size 64 --lr 1e-3 --wd 1e-5 --mask_ratio 0.5 --save_path ./Pretrain_weight/
+
+## **Finetune**
+### Finetune-bacteriaID
+    python main_finetune.py --data_path ./datasets/bacteriaID/ --dataset finetune --device cuda:0 --epoch 200 --batch_size 16 --lr 1e-4 --wd 1e-5 --save_path ./Finetune_weight/ --patience 20
+
+## **Evaluation**
+### Evaluation-bacteriaID
+    jupyter 2_prediction.ipynb
+### Evaluation-DEEPER
+    python main_denoisingTest.py
+## Citation
 
 
 ## Resources
