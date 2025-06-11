@@ -187,13 +187,13 @@ class MaskedAutoencoderViT(nn.Module):
         return loss, pred, mask
     
 
-def spectraMAE_patch100_dim128_h4(**kwargs):
+def spectraMAE_patch100_dim256_h8(**kwargs):
     model = MaskedAutoencoderViT(
-        spectra_size=1000, patch_size=100, encoder_dim=128, depth=4, num_heads=4, decoder_embed_dim=128, 
-        decoder_depth=4, decoder_num_heads=4, dim_mlp=256, 
+        spectra_size=1000, patch_size=100, encoder_dim=256, depth=8, num_heads=8, decoder_embed_dim=256, 
+        decoder_depth=1, decoder_num_heads=8, dim_mlp=256, 
     )
 
     return model
 
 
-spectraMAE_base_patch100 = spectraMAE_patch100_dim128_h4
+spectraMAE_base_patch100 = spectraMAE_patch100_dim256_h8
